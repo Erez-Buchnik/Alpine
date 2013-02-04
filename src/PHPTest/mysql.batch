@@ -1,0 +1,16 @@
+
+CREATE DATABASE AlpineDB;
+
+CREATE TABLE AlpineDB.comments (
+	id INTEGER NOT NULL AUTO_INCREMENT,
+	name VARCHAR(255) NOT NULL,
+	body TEXT NOT NULL,
+	PRIMARY KEY (id)
+);
+
+CREATE USER 'alpinedbuser'@'localhost' IDENTIFIED BY '1235813';
+
+GRANT ALL PRIVILEGES ON AlpineDB.* TO 'alpinedbuser'@'localhost';
+
+FLUSH PRIVILEGES;
+
